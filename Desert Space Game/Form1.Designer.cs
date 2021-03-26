@@ -36,17 +36,23 @@
             this.purpleLabel = new System.Windows.Forms.Label();
             this.whiteLabel = new System.Windows.Forms.Label();
             this.blackLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.wLabel = new System.Windows.Forms.Label();
+            this.mLabel = new System.Windows.Forms.Label();
+            this.nLabel = new System.Windows.Forms.Label();
+            this.bLabel = new System.Windows.Forms.Label();
+            this.vLabel = new System.Windows.Forms.Label();
             this.storyLabel = new System.Windows.Forms.Label();
             this.healthLabel = new System.Windows.Forms.Label();
             this.sanityLabel = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.storyBox = new System.Windows.Forms.PictureBox();
+            this.settingLabel = new System.Windows.Forms.Label();
+            this.creditLabel = new System.Windows.Forms.Label();
+            this.instructionLabel = new System.Windows.Forms.Label();
+            this.playLabel = new System.Windows.Forms.Label();
+            this.continueButton = new System.Windows.Forms.Button();
+            this.nameBox = new System.Windows.Forms.TextBox();
+            this.bombLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.storyBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,7 +81,7 @@
             // 
             this.redLabel.Font = new System.Drawing.Font("mono 07_65", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.redLabel.ForeColor = System.Drawing.Color.Red;
-            this.redLabel.Location = new System.Drawing.Point(421, 257);
+            this.redLabel.Location = new System.Drawing.Point(413, 267);
             this.redLabel.Name = "redLabel";
             this.redLabel.Size = new System.Drawing.Size(367, 58);
             this.redLabel.TabIndex = 2;
@@ -124,61 +130,60 @@
             this.blackLabel.TabIndex = 6;
             this.blackLabel.Text = "Escape to Exit";
             // 
-            // label1
+            // wLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("mono 07_65", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(360, 257);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(24, 21);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "W";
+            this.wLabel.AutoSize = true;
+            this.wLabel.Font = new System.Drawing.Font("mono 07_65", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wLabel.ForeColor = System.Drawing.Color.Red;
+            this.wLabel.Location = new System.Drawing.Point(360, 267);
+            this.wLabel.Name = "wLabel";
+            this.wLabel.Size = new System.Drawing.Size(24, 21);
+            this.wLabel.TabIndex = 7;
+            this.wLabel.Text = "W";
             // 
-            // label2
+            // mLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("mono 07_65", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(360, 211);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(24, 21);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "M";
-            this.label2.Click += new System.EventHandler(this.Label2_Click);
+            this.mLabel.AutoSize = true;
+            this.mLabel.Font = new System.Drawing.Font("mono 07_65", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.mLabel.Location = new System.Drawing.Point(360, 211);
+            this.mLabel.Name = "mLabel";
+            this.mLabel.Size = new System.Drawing.Size(24, 21);
+            this.mLabel.TabIndex = 8;
+            this.mLabel.Text = "M";
             // 
-            // label3
+            // nLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("mono 07_65", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label3.Location = new System.Drawing.Point(360, 306);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(24, 21);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "N";
+            this.nLabel.AutoSize = true;
+            this.nLabel.Font = new System.Drawing.Font("mono 07_65", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.nLabel.Location = new System.Drawing.Point(360, 306);
+            this.nLabel.Name = "nLabel";
+            this.nLabel.Size = new System.Drawing.Size(24, 21);
+            this.nLabel.TabIndex = 9;
+            this.nLabel.Text = "N";
             // 
-            // label4
+            // bLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("mono 07_65", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Yellow;
-            this.label4.Location = new System.Drawing.Point(360, 351);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(24, 21);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "B";
+            this.bLabel.AutoSize = true;
+            this.bLabel.Font = new System.Drawing.Font("mono 07_65", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bLabel.ForeColor = System.Drawing.Color.Yellow;
+            this.bLabel.Location = new System.Drawing.Point(360, 351);
+            this.bLabel.Name = "bLabel";
+            this.bLabel.Size = new System.Drawing.Size(24, 21);
+            this.bLabel.TabIndex = 10;
+            this.bLabel.Text = "B";
             // 
-            // label5
+            // vLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("mono 07_65", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(360, 383);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(24, 21);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "V";
+            this.vLabel.AutoSize = true;
+            this.vLabel.Font = new System.Drawing.Font("mono 07_65", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vLabel.ForeColor = System.Drawing.Color.White;
+            this.vLabel.Location = new System.Drawing.Point(360, 383);
+            this.vLabel.Name = "vLabel";
+            this.vLabel.Size = new System.Drawing.Size(24, 21);
+            this.vLabel.TabIndex = 11;
+            this.vLabel.Text = "V";
             // 
             // storyLabel
             // 
@@ -214,21 +219,8 @@
             this.sanityLabel.TabIndex = 14;
             this.sanityLabel.Text = "Sanity";
             // 
-            // label6
-            // 
-            this.label6.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("mono 07_65", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(-7, 190);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(382, 21);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "picture/media/minigame here";
-            // 
             // gameTimer
             // 
-            this.gameTimer.Enabled = true;
             this.gameTimer.Tick += new System.EventHandler(this.GameTimer_Tick);
             // 
             // storyBox
@@ -239,21 +231,101 @@
             this.storyBox.TabIndex = 16;
             this.storyBox.TabStop = false;
             // 
+            // settingLabel
+            // 
+            this.settingLabel.BackColor = System.Drawing.Color.Transparent;
+            this.settingLabel.Font = new System.Drawing.Font("mono 07_65", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settingLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.settingLabel.Location = new System.Drawing.Point(230, 306);
+            this.settingLabel.Name = "settingLabel";
+            this.settingLabel.Size = new System.Drawing.Size(124, 45);
+            this.settingLabel.TabIndex = 20;
+            this.settingLabel.Text = "Settings";
+            // 
+            // creditLabel
+            // 
+            this.creditLabel.BackColor = System.Drawing.Color.Transparent;
+            this.creditLabel.Font = new System.Drawing.Font("mono 07_65", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.creditLabel.ForeColor = System.Drawing.Color.Yellow;
+            this.creditLabel.Location = new System.Drawing.Point(250, 351);
+            this.creditLabel.Name = "creditLabel";
+            this.creditLabel.Size = new System.Drawing.Size(107, 21);
+            this.creditLabel.TabIndex = 19;
+            this.creditLabel.Text = "Credits";
+            // 
+            // instructionLabel
+            // 
+            this.instructionLabel.BackColor = System.Drawing.Color.Transparent;
+            this.instructionLabel.Font = new System.Drawing.Font("mono 07_65", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.instructionLabel.ForeColor = System.Drawing.Color.Red;
+            this.instructionLabel.Location = new System.Drawing.Point(173, 267);
+            this.instructionLabel.Name = "instructionLabel";
+            this.instructionLabel.Size = new System.Drawing.Size(184, 58);
+            this.instructionLabel.TabIndex = 18;
+            this.instructionLabel.Text = "Instructions";
+            // 
+            // playLabel
+            // 
+            this.playLabel.BackColor = System.Drawing.Color.Transparent;
+            this.playLabel.Font = new System.Drawing.Font("mono 07_65", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.playLabel.Location = new System.Drawing.Point(250, 214);
+            this.playLabel.Name = "playLabel";
+            this.playLabel.Size = new System.Drawing.Size(98, 53);
+            this.playLabel.TabIndex = 17;
+            this.playLabel.Text = " Start";
+            // 
+            // continueButton
+            // 
+            this.continueButton.Enabled = false;
+            this.continueButton.Location = new System.Drawing.Point(335, 138);
+            this.continueButton.Name = "continueButton";
+            this.continueButton.Size = new System.Drawing.Size(119, 49);
+            this.continueButton.TabIndex = 21;
+            this.continueButton.Text = "Enter your name, then hit continue";
+            this.continueButton.UseVisualStyleBackColor = true;
+            this.continueButton.Click += new System.EventHandler(this.ContinueButton_Click);
+            // 
+            // nameBox
+            // 
+            this.nameBox.Location = new System.Drawing.Point(335, 193);
+            this.nameBox.Name = "nameBox";
+            this.nameBox.Size = new System.Drawing.Size(119, 20);
+            this.nameBox.TabIndex = 22;
+            // 
+            // bombLabel
+            // 
+            this.bombLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.bombLabel.AutoSize = true;
+            this.bombLabel.Font = new System.Drawing.Font("mono 07_65", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bombLabel.ForeColor = System.Drawing.Color.White;
+            this.bombLabel.Location = new System.Drawing.Point(27, 101);
+            this.bombLabel.Name = "bombLabel";
+            this.bombLabel.Size = new System.Drawing.Size(94, 21);
+            this.bombLabel.TabIndex = 23;
+            this.bombLabel.Text = "Sanity";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.bombLabel);
+            this.Controls.Add(this.nameBox);
+            this.Controls.Add(this.continueButton);
+            this.Controls.Add(this.settingLabel);
+            this.Controls.Add(this.creditLabel);
+            this.Controls.Add(this.instructionLabel);
+            this.Controls.Add(this.playLabel);
             this.Controls.Add(this.sanityLabel);
             this.Controls.Add(this.healthLabel);
             this.Controls.Add(this.storyLabel);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.vLabel);
+            this.Controls.Add(this.bLabel);
+            this.Controls.Add(this.nLabel);
+            this.Controls.Add(this.mLabel);
+            this.Controls.Add(this.wLabel);
             this.Controls.Add(this.blackLabel);
             this.Controls.Add(this.whiteLabel);
             this.Controls.Add(this.purpleLabel);
@@ -264,7 +336,6 @@
             this.Controls.Add(this.storyBox);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
@@ -283,17 +354,23 @@
         private System.Windows.Forms.Label purpleLabel;
         private System.Windows.Forms.Label whiteLabel;
         private System.Windows.Forms.Label blackLabel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label wLabel;
+        private System.Windows.Forms.Label mLabel;
+        private System.Windows.Forms.Label nLabel;
+        private System.Windows.Forms.Label bLabel;
+        private System.Windows.Forms.Label vLabel;
         private System.Windows.Forms.Label storyLabel;
         private System.Windows.Forms.Label healthLabel;
         private System.Windows.Forms.Label sanityLabel;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Timer gameTimer;
         private System.Windows.Forms.PictureBox storyBox;
+        private System.Windows.Forms.Label settingLabel;
+        private System.Windows.Forms.Label creditLabel;
+        private System.Windows.Forms.Label instructionLabel;
+        private System.Windows.Forms.Label playLabel;
+        private System.Windows.Forms.Button continueButton;
+        private System.Windows.Forms.TextBox nameBox;
+        private System.Windows.Forms.Label bombLabel;
     }
 }
 
