@@ -165,6 +165,24 @@
     <None Include="Resources\computerSceen.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\groan %282%29.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groan %282%291.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vomit.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\456310__corruptinator__electricity-energy-2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ambience.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heavy wind.wav" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\impact.wav" />
   </ItemGroup>
   <ItemGroup>

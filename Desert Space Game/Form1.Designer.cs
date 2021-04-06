@@ -258,6 +258,7 @@
             this.settingLabel.Size = new System.Drawing.Size(124, 45);
             this.settingLabel.TabIndex = 20;
             this.settingLabel.Text = "Settings";
+            this.settingLabel.Click += new System.EventHandler(this.SettingLabel_Click);
             // 
             // creditLabel
             // 
@@ -269,6 +270,7 @@
             this.creditLabel.Size = new System.Drawing.Size(107, 21);
             this.creditLabel.TabIndex = 19;
             this.creditLabel.Text = "Credits";
+            this.creditLabel.Click += new System.EventHandler(this.CreditLabel_Click);
             // 
             // instructionLabel
             // 
@@ -280,6 +282,7 @@
             this.instructionLabel.Size = new System.Drawing.Size(184, 58);
             this.instructionLabel.TabIndex = 18;
             this.instructionLabel.Text = "Instructions";
+            this.instructionLabel.Click += new System.EventHandler(this.InstructionLabel_Click);
             // 
             // playLabel
             // 
@@ -291,6 +294,7 @@
             this.playLabel.Size = new System.Drawing.Size(98, 53);
             this.playLabel.TabIndex = 17;
             this.playLabel.Text = " Start";
+            this.playLabel.Click += new System.EventHandler(this.PlayLabel_Click);
             // 
             // continueButton
             // 
@@ -309,6 +313,7 @@
             this.nameBox.Name = "nameBox";
             this.nameBox.Size = new System.Drawing.Size(119, 20);
             this.nameBox.TabIndex = 22;
+            this.nameBox.TextChanged += new System.EventHandler(this.NameBox_TextChanged);
             // 
             // bombLabel
             // 
@@ -333,12 +338,14 @@
             // 
             // broadcastOnBox
             // 
+            this.broadcastOnBox.BackColor = System.Drawing.Color.Transparent;
             this.broadcastOnBox.Location = new System.Drawing.Point(243, 282);
             this.broadcastOnBox.Name = "broadcastOnBox";
             this.broadcastOnBox.Size = new System.Drawing.Size(105, 90);
             this.broadcastOnBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.broadcastOnBox.TabIndex = 28;
             this.broadcastOnBox.TabStop = false;
+            this.broadcastOnBox.Click += new System.EventHandler(this.BroadcastOnBox_Click);
             // 
             // masterKeyBox
             // 
@@ -363,6 +370,7 @@
             // 
             // crowbarBox
             // 
+            this.crowbarBox.BackColor = System.Drawing.Color.Transparent;
             this.crowbarBox.Location = new System.Drawing.Point(243, 186);
             this.crowbarBox.Name = "crowbarBox";
             this.crowbarBox.Size = new System.Drawing.Size(105, 90);
@@ -403,15 +411,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.airlockOnBox);
-            this.Controls.Add(this.broadcastOnBox);
-            this.Controls.Add(this.masterKeyBox);
-            this.Controls.Add(this.preservationSuitBox);
-            this.Controls.Add(this.crowbarBox);
-            this.Controls.Add(this.respiratorBox);
-            this.Controls.Add(this.bombLabel);
             this.Controls.Add(this.nameBox);
             this.Controls.Add(this.continueButton);
+            this.Controls.Add(this.broadcastOnBox);
+            this.Controls.Add(this.crowbarBox);
+            this.Controls.Add(this.airlockOnBox);
+            this.Controls.Add(this.masterKeyBox);
+            this.Controls.Add(this.preservationSuitBox);
+            this.Controls.Add(this.respiratorBox);
+            this.Controls.Add(this.bombLabel);
             this.Controls.Add(this.settingLabel);
             this.Controls.Add(this.creditLabel);
             this.Controls.Add(this.instructionLabel);

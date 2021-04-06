@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 namespace Desert_Space_Game
 {
     public partial class Form1 : Form
@@ -52,11 +53,19 @@ namespace Desert_Space_Game
         //List<int> orbLength = new List<int>();
         //List<int> orbWidth = new List<int>();
         List<int> orbDirection = new List<int>();
-        int orbLength = 20;
-        int orbWidth = 20;
+        int orbLength = 10;
+        int orbWidth = 10;
 
         List<int> orbSpeed = new List<int>();
 
+        //sounds
+
+        SoundPlayer beep = new SoundPlayer(Properties.Resources.beep_sound_effect);
+        SoundPlayer impact = new SoundPlayer(Properties.Resources.impact);
+        SoundPlayer wind = new SoundPlayer(Properties.Resources.heavy_wind);
+        SoundPlayer ambience = new SoundPlayer(Properties.Resources.ambience);
+        SoundPlayer vomit = new SoundPlayer(Properties.Resources.vomit);
+        SoundPlayer zap = new SoundPlayer(Properties.Resources._456310__corruptinator__electricity_energy_2);
 
         //other variables
 
@@ -69,6 +78,7 @@ namespace Desert_Space_Game
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
+            titleLabel.Text = $"{gameScreen}";
             mLabel.Text = $"{location}";
             if (gameScreen == "game")
             {
@@ -99,6 +109,11 @@ namespace Desert_Space_Game
                 settingLabel.Show();
                 instructionLabel.Show();
                 creditLabel.Show();
+                location = 36;
+                deathTimer = 500;
+                countdown= 500;
+                titleLabel.Text = "DESERT";
+
                 //bool reset
                 engineer = false;
                 scientist = false;
@@ -122,6 +137,40 @@ namespace Desert_Space_Game
                 broadcastOnBox.Hide();
 
             }
+            //if (gameScreen == "instructions") ;
+            {
+                this.BackColor = Color.Blue;
+                storyLabel.Text = "";
+                greenLabel.Text = "";
+                redLabel.Text = "";
+                purpleLabel.Text = "";
+                yellowLabel.Text = "";
+                whiteLabel.Text = "";
+                healthLabel.Hide();
+                sanityLabel.Hide();
+                bombLabel.Hide();
+                continueButton.Hide();
+                location = 35;
+                nameBox.Enabled = false;
+                nameBox.Hide();
+                playLabel.Show();
+                settingLabel.Show();
+                instructionLabel.Show();
+                creditLabel.Show();
+                location = 36;
+                deathTimer = 500;
+                countdown = 500;
+                titleLabel.Text = "DESERT";
+                roleBox.Hide();
+                respiratorBox.Hide();
+                crowbarBox.Hide();
+                preservationSuitBox.Hide();
+                masterKeyBox.Hide();
+                airlockOnBox.Hide();
+                broadcastOnBox.Hide();
+
+            }
+
             if (gameScreen == "opening")
             {
                 playLabel.Hide();
@@ -187,8 +236,6 @@ namespace Desert_Space_Game
             {
                 roleBox.Show();
                 roleBox.Image = Properties.Resources.engineer1;
-
-
             }
             if (officer == true)
             {
@@ -269,6 +316,7 @@ namespace Desert_Space_Game
                 health = 3;
                 sanity = 3;
             }
+
             //orb crisis
             if (blueOrb == true)
             {
@@ -375,10 +423,11 @@ namespace Desert_Space_Game
                 else if (location == 31) { location = 38; }
                 else if (location == 32) { location = 32; }
                 else if (location == 33) { }
-                else if (location == 34) { }
-                else if (location == 35) { location = 36; }
+                else if (location == 34) { gameScreen = "opening"; continueButton.Show(); }
+                else if (location == 35) { gameScreen = "opening"; continueButton.Show(); }
                 else if (location == 36) { gameScreen = "opening"; continueButton.Show(); }
-                else if (location == 37) { location = 36; }
+                else if (location == 37) { { gameScreen = "opening"; continueButton.Show(); } }
+                else if (location == 38) { location = 36; gameScreen = "title"; }
                 else if (location == 39) { location = 36; gameScreen = "title"; }
                 else if (location == 99) { location = 0; }
 
@@ -428,8 +477,11 @@ namespace Desert_Space_Game
                 else if (location == 27) { location = 39; }
                 else if (location == 28) { location = 9; }
                 else if (location == 29) { location = 32; }
-                else if (location == 35){ location = 36; }
-                else if (location == 36) { location = 35; }
+                else if (location == 34) { gameScreen = "instructions"; }
+                else if (location == 35) { }
+                else if (location == 36) { gameScreen = "instructions"; }
+                else if (location == 37) { gameScreen = "instructions"; }
+                else if (location == 38) { location = 36; gameScreen = "title"; }
                 else if (location == 39) { location = -1; gameScreen = "game"; storyLabel.Text = "Press any of the below keys to continue"; }
 
                 else if (location == -1)
@@ -454,6 +506,7 @@ namespace Desert_Space_Game
                 else if (location == 29) { location = 30; }
                 else if (location == 36) { location = 34; }
                 else if (location == 34) { location = 36; }
+                else if (location == 38) { location = 36; gameScreen = "title"; }
                 else if (location == 39) { this.Close(); }
                 else if (location == -3) { location = 9; }
             }
@@ -484,6 +537,7 @@ namespace Desert_Space_Game
                 }
                 else if (location == 36) { location = 37; }
                 else if (location == 37) { location = 36; }
+                else if (location == 38) { location = 36; gameScreen = "title"; }
                 else if (location == -1)
                 {
                     location = 1;
@@ -501,6 +555,8 @@ namespace Desert_Space_Game
                     location = 22;
                 }
                 else if (location == 9) { location = 22; }
+                else if (location == 38) { location = 36; gameScreen = "title"; }
+
             }
 
 
@@ -554,13 +610,14 @@ namespace Desert_Space_Game
                 case 1:
                     yellowLabel.Text = "";
                     whiteLabel.Text = "";
-                    storyLabel.Text = "You dream of your previous life. What was your passion, your name?";
+                    storyLabel.Text = "You dream of your previous life. What was your passion?";
                     greenLabel.Text = "I was a Scientist";
                     redLabel.Text = "I was an Officer";
                     purpleLabel.Text = "I was an Engineer";
                     yellowLabel.Text = "";
                     whiteLabel.Text = "";
                     //storyBox.Image = ();
+                    ambience.Play();
                     Refresh();
                     break;
                 case 2:
@@ -683,6 +740,7 @@ namespace Desert_Space_Game
                     yellowLabel.Text = "";
                     storyBox.Image = (Properties.Resources.engine1);
                     whiteLabel.Text = "";
+                    impact.Play();
                     Refresh();
                     break;
                 case 13:
@@ -722,11 +780,11 @@ namespace Desert_Space_Game
                     storyLabel.Text = "After entering authentication, you access the private console. Within are documents never seen before... Red Sea, Jericho, Broken Paradise";
                     greenLabel.Text = "Let's investigate";
                     redLabel.Text = "I... I don't need to know what is in there.";
-
                     purpleLabel.Text = "";
                     yellowLabel.Text = "";
                     whiteLabel.Text = "";
                     storyBox.Image = (Properties.Resources.computerScreen);
+                    beep.Play();
                     Refresh();
                     break;
                 case 17:
@@ -738,6 +796,7 @@ namespace Desert_Space_Game
                     yellowLabel.Text = "";
                     whiteLabel.Text = "";
                     storyBox.Image = (Properties.Resources.computerScreen);
+                    beep.Play();
                     Refresh();
                     break;
                 case 18:
@@ -749,6 +808,7 @@ namespace Desert_Space_Game
                     yellowLabel.Text = "";
                     whiteLabel.Text = "";
                     storyBox.Image = (Properties.Resources.computerScreen);
+                    beep.Play();
                     Refresh();
                     break;
                 case 19:
@@ -913,7 +973,9 @@ namespace Desert_Space_Game
                 case 36:
                     Refresh();
                     break;
-
+                case 38:
+                    storyLabel.Text = "You managed to survive the horrors. The only question is, what next?";
+                    break;
 
                 case 39:
                     storyLabel.Text = "Regretably, you have perished.";
@@ -957,6 +1019,36 @@ namespace Desert_Space_Game
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void NameBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SettingLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CreditLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InstructionLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PlayLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BroadcastOnBox_Click(object sender, EventArgs e)
         {
 
         }

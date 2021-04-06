@@ -61,6 +61,15 @@ namespace Desert_Space_Game.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _456310__corruptinator__electricity_energy_2 {
+            get {
+                return ResourceManager.GetStream("_456310__corruptinator__electricity_energy_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap airlock1 {
@@ -77,6 +86,15 @@ namespace Desert_Space_Game.Properties {
             get {
                 object obj = ResourceManager.GetObject("alienworld1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream ambience {
+            get {
+                return ResourceManager.GetStream("ambience", resourceCulture);
             }
         }
         
@@ -192,6 +210,15 @@ namespace Desert_Space_Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream heavy_wind {
+            get {
+                return ResourceManager.GetStream("heavy_wind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream impact {
             get {
                 return ResourceManager.GetStream("impact", resourceCulture);
@@ -235,6 +262,15 @@ namespace Desert_Space_Game.Properties {
             get {
                 object obj = ResourceManager.GetObject("spaceship1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream vomit {
+            get {
+                return ResourceManager.GetStream("vomit", resourceCulture);
             }
         }
     }
