@@ -91,6 +91,15 @@ namespace Desert_Space_Game.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream beep_sound_effect {
+            get {
+                return ResourceManager.GetStream("beep_sound_effect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap cockpit1 {
@@ -113,9 +122,29 @@ namespace Desert_Space_Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap computerScreen {
+            get {
+                object obj = ResourceManager.GetObject("computerScreen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap controlRoom1 {
             get {
                 object obj = ResourceManager.GetObject("controlRoom1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap corridor {
+            get {
+                object obj = ResourceManager.GetObject("corridor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -147,6 +176,25 @@ namespace Desert_Space_Game.Properties {
             get {
                 object obj = ResourceManager.GetObject("engineer1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hallway {
+            get {
+                object obj = ResourceManager.GetObject("hallway", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream impact {
+            get {
+                return ResourceManager.GetStream("impact", resourceCulture);
             }
         }
         

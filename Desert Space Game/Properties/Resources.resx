@@ -127,14 +127,23 @@
   <data name="beam1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\beam1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="beep_sound_effect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\beep sound effect.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="cockpit1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cockpit1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="computerChip1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\computerChip1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="computerScreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\computerSceen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="controlRoom1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\controlRoom1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="corridor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\corridor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="crowbar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\crowbar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -144,6 +153,12 @@
   </data>
   <data name="engineer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\engineer1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hallway" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hallway.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="impact" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\impact.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="officer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ID card1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

@@ -45,7 +45,6 @@
             this.healthLabel = new System.Windows.Forms.Label();
             this.sanityLabel = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
-            this.roleBox = new System.Windows.Forms.PictureBox();
             this.settingLabel = new System.Windows.Forms.Label();
             this.creditLabel = new System.Windows.Forms.Label();
             this.instructionLabel = new System.Windows.Forms.Label();
@@ -53,28 +52,29 @@
             this.continueButton = new System.Windows.Forms.Button();
             this.nameBox = new System.Windows.Forms.TextBox();
             this.bombLabel = new System.Windows.Forms.Label();
-            this.respiratorBox = new System.Windows.Forms.PictureBox();
-            this.crowbarBox = new System.Windows.Forms.PictureBox();
-            this.preservationSuitBox = new System.Windows.Forms.PictureBox();
-            this.masterKeyBox = new System.Windows.Forms.PictureBox();
-            this.broadcastOnBox = new System.Windows.Forms.PictureBox();
             this.airlockOnBox = new System.Windows.Forms.PictureBox();
+            this.broadcastOnBox = new System.Windows.Forms.PictureBox();
+            this.masterKeyBox = new System.Windows.Forms.PictureBox();
+            this.preservationSuitBox = new System.Windows.Forms.PictureBox();
+            this.crowbarBox = new System.Windows.Forms.PictureBox();
+            this.respiratorBox = new System.Windows.Forms.PictureBox();
+            this.roleBox = new System.Windows.Forms.PictureBox();
             this.storyBox = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.roleBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.respiratorBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.crowbarBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.preservationSuitBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masterKeyBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.broadcastOnBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.airlockOnBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.broadcastOnBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterKeyBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.preservationSuitBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.crowbarBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.respiratorBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storyBox)).BeginInit();
             this.SuspendLayout();
             // 
             // greenLabel
             // 
-            this.greenLabel.Font = new System.Drawing.Font("mono 07_65", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.greenLabel.Font = new System.Drawing.Font("mono 07_65", 7F, System.Drawing.FontStyle.Bold);
             this.greenLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.greenLabel.Location = new System.Drawing.Point(390, 214);
+            this.greenLabel.Location = new System.Drawing.Point(409, 214);
             this.greenLabel.Name = "greenLabel";
             this.greenLabel.Size = new System.Drawing.Size(358, 53);
             this.greenLabel.TabIndex = 0;
@@ -82,19 +82,19 @@
             // 
             // titleLabel
             // 
-            this.titleLabel.AutoSize = true;
+            this.titleLabel.BackColor = System.Drawing.Color.Transparent;
             this.titleLabel.Font = new System.Drawing.Font("mono 07_65", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.titleLabel.Location = new System.Drawing.Point(410, 9);
+            this.titleLabel.Location = new System.Drawing.Point(357, 6);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(280, 39);
+            this.titleLabel.Size = new System.Drawing.Size(476, 181);
             this.titleLabel.TabIndex = 1;
             this.titleLabel.Text = "DESERT VOID";
             // 
             // redLabel
             // 
             this.redLabel.BackColor = System.Drawing.Color.Transparent;
-            this.redLabel.Font = new System.Drawing.Font("mono 07_65", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.redLabel.Font = new System.Drawing.Font("mono 07_65", 7F, System.Drawing.FontStyle.Bold);
             this.redLabel.ForeColor = System.Drawing.Color.Red;
             this.redLabel.Location = new System.Drawing.Point(413, 267);
             this.redLabel.Name = "redLabel";
@@ -105,7 +105,7 @@
             // yellowLabel
             // 
             this.yellowLabel.BackColor = System.Drawing.Color.Transparent;
-            this.yellowLabel.Font = new System.Drawing.Font("mono 07_65", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yellowLabel.Font = new System.Drawing.Font("mono 07_65", 7F, System.Drawing.FontStyle.Bold);
             this.yellowLabel.ForeColor = System.Drawing.Color.Yellow;
             this.yellowLabel.Location = new System.Drawing.Point(417, 351);
             this.yellowLabel.Name = "yellowLabel";
@@ -116,7 +116,7 @@
             // purpleLabel
             // 
             this.purpleLabel.BackColor = System.Drawing.Color.Transparent;
-            this.purpleLabel.Font = new System.Drawing.Font("mono 07_65", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.purpleLabel.Font = new System.Drawing.Font("mono 07_65", 7F, System.Drawing.FontStyle.Bold);
             this.purpleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.purpleLabel.Location = new System.Drawing.Point(421, 306);
             this.purpleLabel.Name = "purpleLabel";
@@ -129,11 +129,11 @@
             this.whiteLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.whiteLabel.AutoSize = true;
             this.whiteLabel.BackColor = System.Drawing.Color.Transparent;
-            this.whiteLabel.Font = new System.Drawing.Font("mono 07_65", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.whiteLabel.Font = new System.Drawing.Font("mono 07_65", 7F, System.Drawing.FontStyle.Bold);
             this.whiteLabel.ForeColor = System.Drawing.Color.White;
             this.whiteLabel.Location = new System.Drawing.Point(421, 383);
             this.whiteLabel.Name = "whiteLabel";
-            this.whiteLabel.Size = new System.Drawing.Size(228, 21);
+            this.whiteLabel.Size = new System.Drawing.Size(179, 16);
             this.whiteLabel.TabIndex = 5;
             this.whiteLabel.Text = "potential choice";
             // 
@@ -211,9 +211,9 @@
             // storyLabel
             // 
             this.storyLabel.BackColor = System.Drawing.Color.Transparent;
-            this.storyLabel.Font = new System.Drawing.Font("mono 07_65", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storyLabel.Font = new System.Drawing.Font("mono 07_65", 8F, System.Drawing.FontStyle.Bold);
             this.storyLabel.ForeColor = System.Drawing.Color.White;
-            this.storyLabel.Location = new System.Drawing.Point(400, 45);
+            this.storyLabel.Location = new System.Drawing.Point(392, 40);
             this.storyLabel.Name = "storyLabel";
             this.storyLabel.Size = new System.Drawing.Size(388, 166);
             this.storyLabel.TabIndex = 12;
@@ -247,15 +247,6 @@
             // gameTimer
             // 
             this.gameTimer.Tick += new System.EventHandler(this.GameTimer_Tick);
-            // 
-            // roleBox
-            // 
-            this.roleBox.Location = new System.Drawing.Point(16, 85);
-            this.roleBox.Name = "roleBox";
-            this.roleBox.Size = new System.Drawing.Size(105, 90);
-            this.roleBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.roleBox.TabIndex = 16;
-            this.roleBox.TabStop = false;
             // 
             // settingLabel
             // 
@@ -331,23 +322,32 @@
             this.bombLabel.TabIndex = 23;
             this.bombLabel.Text = "Sanity";
             // 
-            // respiratorBox
+            // airlockOnBox
             // 
-            this.respiratorBox.Location = new System.Drawing.Point(16, 186);
-            this.respiratorBox.Name = "respiratorBox";
-            this.respiratorBox.Size = new System.Drawing.Size(105, 90);
-            this.respiratorBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.respiratorBox.TabIndex = 24;
-            this.respiratorBox.TabStop = false;
+            this.airlockOnBox.Location = new System.Drawing.Point(16, 282);
+            this.airlockOnBox.Name = "airlockOnBox";
+            this.airlockOnBox.Size = new System.Drawing.Size(105, 90);
+            this.airlockOnBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.airlockOnBox.TabIndex = 29;
+            this.airlockOnBox.TabStop = false;
             // 
-            // crowbarBox
+            // broadcastOnBox
             // 
-            this.crowbarBox.Location = new System.Drawing.Point(243, 186);
-            this.crowbarBox.Name = "crowbarBox";
-            this.crowbarBox.Size = new System.Drawing.Size(105, 90);
-            this.crowbarBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.crowbarBox.TabIndex = 25;
-            this.crowbarBox.TabStop = false;
+            this.broadcastOnBox.Location = new System.Drawing.Point(243, 282);
+            this.broadcastOnBox.Name = "broadcastOnBox";
+            this.broadcastOnBox.Size = new System.Drawing.Size(105, 90);
+            this.broadcastOnBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.broadcastOnBox.TabIndex = 28;
+            this.broadcastOnBox.TabStop = false;
+            // 
+            // masterKeyBox
+            // 
+            this.masterKeyBox.Location = new System.Drawing.Point(127, 282);
+            this.masterKeyBox.Name = "masterKeyBox";
+            this.masterKeyBox.Size = new System.Drawing.Size(105, 90);
+            this.masterKeyBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.masterKeyBox.TabIndex = 27;
+            this.masterKeyBox.TabStop = false;
             // 
             // preservationSuitBox
             // 
@@ -361,32 +361,32 @@
             this.preservationSuitBox.TabStop = false;
             this.preservationSuitBox.Visible = false;
             // 
-            // masterKeyBox
+            // crowbarBox
             // 
-            this.masterKeyBox.Location = new System.Drawing.Point(127, 282);
-            this.masterKeyBox.Name = "masterKeyBox";
-            this.masterKeyBox.Size = new System.Drawing.Size(105, 90);
-            this.masterKeyBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.masterKeyBox.TabIndex = 27;
-            this.masterKeyBox.TabStop = false;
+            this.crowbarBox.Location = new System.Drawing.Point(243, 186);
+            this.crowbarBox.Name = "crowbarBox";
+            this.crowbarBox.Size = new System.Drawing.Size(105, 90);
+            this.crowbarBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.crowbarBox.TabIndex = 25;
+            this.crowbarBox.TabStop = false;
             // 
-            // broadcastOnBox
+            // respiratorBox
             // 
-            this.broadcastOnBox.Location = new System.Drawing.Point(243, 282);
-            this.broadcastOnBox.Name = "broadcastOnBox";
-            this.broadcastOnBox.Size = new System.Drawing.Size(105, 90);
-            this.broadcastOnBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.broadcastOnBox.TabIndex = 28;
-            this.broadcastOnBox.TabStop = false;
+            this.respiratorBox.Location = new System.Drawing.Point(16, 186);
+            this.respiratorBox.Name = "respiratorBox";
+            this.respiratorBox.Size = new System.Drawing.Size(105, 90);
+            this.respiratorBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.respiratorBox.TabIndex = 24;
+            this.respiratorBox.TabStop = false;
             // 
-            // airlockOnBox
+            // roleBox
             // 
-            this.airlockOnBox.Location = new System.Drawing.Point(16, 282);
-            this.airlockOnBox.Name = "airlockOnBox";
-            this.airlockOnBox.Size = new System.Drawing.Size(105, 90);
-            this.airlockOnBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.airlockOnBox.TabIndex = 29;
-            this.airlockOnBox.TabStop = false;
+            this.roleBox.Location = new System.Drawing.Point(16, 85);
+            this.roleBox.Name = "roleBox";
+            this.roleBox.Size = new System.Drawing.Size(105, 90);
+            this.roleBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.roleBox.TabIndex = 16;
+            this.roleBox.TabStop = false;
             // 
             // storyBox
             // 
@@ -418,7 +418,6 @@
             this.Controls.Add(this.playLabel);
             this.Controls.Add(this.sanityLabel);
             this.Controls.Add(this.healthLabel);
-            this.Controls.Add(this.storyLabel);
             this.Controls.Add(this.vLabel);
             this.Controls.Add(this.bLabel);
             this.Controls.Add(this.nLabel);
@@ -429,22 +428,23 @@
             this.Controls.Add(this.purpleLabel);
             this.Controls.Add(this.yellowLabel);
             this.Controls.Add(this.redLabel);
-            this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.greenLabel);
             this.Controls.Add(this.roleBox);
             this.Controls.Add(this.storyBox);
+            this.Controls.Add(this.storyLabel);
+            this.Controls.Add(this.titleLabel);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
-            ((System.ComponentModel.ISupportInitialize)(this.roleBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.respiratorBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.crowbarBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.preservationSuitBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masterKeyBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.broadcastOnBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.airlockOnBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.broadcastOnBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterKeyBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.preservationSuitBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.crowbarBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.respiratorBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.storyBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

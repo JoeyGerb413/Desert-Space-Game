@@ -155,5 +155,20 @@
   <ItemGroup>
     <None Include="Resources\crowbar.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corridor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hallway.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computerSceen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\impact.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beep sound effect.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
