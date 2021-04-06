@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +79,81 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spaceship.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alienworld.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cockpit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engine.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beam.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ID card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engineer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\airlock.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scientist.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preservation suit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computerChip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\controlRoom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spaceship1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alienworld1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cockpit1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engine1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beam1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ID card1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engineer1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\airlock1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scientist1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preservation suit1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computerChip1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\controlRoom1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crowbar.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
