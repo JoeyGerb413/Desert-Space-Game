@@ -72,6 +72,16 @@ namespace Desert_Space_Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap airlock_icon {
+            get {
+                object obj = ResourceManager.GetObject("airlock_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap airlock1 {
             get {
                 object obj = ResourceManager.GetObject("airlock1", resourceCulture);
@@ -123,6 +133,16 @@ namespace Desert_Space_Game.Properties {
         internal static System.Drawing.Bitmap cockpit1 {
             get {
                 object obj = ResourceManager.GetObject("cockpit1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap communications {
+            get {
+                object obj = ResourceManager.GetObject("communications", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -241,6 +261,16 @@ namespace Desert_Space_Game.Properties {
         internal static System.Drawing.Bitmap preservation_suit1 {
             get {
                 object obj = ResourceManager.GetObject("preservation suit1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap respirator {
+            get {
+                object obj = ResourceManager.GetObject("respirator", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
