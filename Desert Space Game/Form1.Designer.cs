@@ -263,15 +263,7 @@
             // 
             // settingLabel
             // 
-            this.settingLabel.BackColor = System.Drawing.Color.Transparent;
-            this.settingLabel.Font = new System.Drawing.Font("mono 07_65", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settingLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.settingLabel.Location = new System.Drawing.Point(230, 306);
-            this.settingLabel.Name = "settingLabel";
-            this.settingLabel.Size = new System.Drawing.Size(124, 45);
-            this.settingLabel.TabIndex = 20;
-            this.settingLabel.Text = "Settings";
-            this.settingLabel.Click += new System.EventHandler(this.SettingLabel_Click);
+
             // 
             // creditLabel
             // 

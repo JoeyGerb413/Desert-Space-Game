@@ -35,12 +35,14 @@ namespace Desert_Space_Game
         int scene18Visited = 0;
         int scene4Visited = 0;
         int scene22Visited = 0;
+        int scene14Visited = 0;
         int scene16Visited = 0;
         int scene12Visited = 0;
 
         string textGameOver = "YOU DIED";
 
         //game bools
+        bool hubVisit = true;
         bool engineer = false;
         bool scientist = false;
         bool officer = false;
@@ -135,42 +137,8 @@ namespace Desert_Space_Game
                 masterKeyBox.Hide();
                 airlockOnBox.Hide();
                 broadcastOnBox.Hide();
-
+                Refresh();
             }
-            //if (gameScreen == "instructions") ;
-            {
-                this.BackColor = Color.Blue;
-                storyLabel.Text = "";
-                greenLabel.Text = "";
-                redLabel.Text = "";
-                purpleLabel.Text = "";
-                yellowLabel.Text = "";
-                whiteLabel.Text = "";
-                healthLabel.Hide();
-                sanityLabel.Hide();
-                bombLabel.Hide();
-                continueButton.Hide();
-                location = 35;
-                nameBox.Enabled = false;
-                nameBox.Hide();
-                playLabel.Show();
-                settingLabel.Show();
-                instructionLabel.Show();
-                creditLabel.Show();
-                location = 36;
-                deathTimer = 500;
-                countdown = 500;
-                titleLabel.Text = "DESERT";
-                roleBox.Hide();
-                respiratorBox.Hide();
-                crowbarBox.Hide();
-                preservationSuitBox.Hide();
-                masterKeyBox.Hide();
-                airlockOnBox.Hide();
-                broadcastOnBox.Hide();
-
-            }
-
             if (gameScreen == "opening")
             {
                 playLabel.Hide();
@@ -204,7 +172,6 @@ namespace Desert_Space_Game
                 masterKeyBox.Hide();
                 airlockOnBox.Hide();
                 broadcastOnBox.Hide();
-
             }
             if (gameScreen == "game")
             {
@@ -264,7 +231,6 @@ namespace Desert_Space_Game
             if (respirator == true)
             {
                 respiratorBox.Show();
-                //respiratorBox.Image = Properties.Resources.respirator;
             }
             if (respirator == false)
             {
@@ -450,8 +416,8 @@ namespace Desert_Space_Game
                     health--;
                     location = 26;
                 }
-                else if (location == 26) { location = 27; }
-                else if (location == 27) { }
+                else if (location == 26) { location = 27; health--; sanity--; blueOrb = true; }
+                else if (location == 27) { location = 9; }
                 else if (location == 28) { location = 9; }
                 else if (location == 29) { location = 31; }
                 else if (location == 30) { location = 38; } // end game scenes
@@ -486,8 +452,8 @@ namespace Desert_Space_Game
                 else if (location == 1) { officer = true; location = 2; }
                 else if (location == 2)
                 {
-                    if (scene4Visited > 0) { location = -4; }  
-                    
+                    if (scene4Visited > 0) { location = -4; }
+
                     else { location = 4; }
                 }
                 else if (location == 3) { location = 9; }
@@ -500,8 +466,8 @@ namespace Desert_Space_Game
                 else if (location == 10) { location = 9; }
                 else if (location == 11) { location = 12; health--; preservation = true; }
                 else if (location == 12) { location = 9; }
-                else if (location == 13) { location = 14; sanity--; }
-                else if (location == 14) { if (scientist == true) { location = 15; } else { location = 13; } }
+                else if (location == 13) { if (scene14Visited == 0) { location = 14; sanity--; } else { location = -14; } }
+                else if (location == 14) { if (scientist == true) { location = 15; } else { location = 13; } scene14Visited++; }
                 else if (location == 15) { location = 13; }
                 else if (location == 16) { location = 18; bomb = true; }
                 else if (location == 17) { location = -5; }
@@ -518,11 +484,11 @@ namespace Desert_Space_Game
                 else if (location == 28) { location = 9; }
                 else if (location == 29) { location = 32; }
                 else if (location == 34) { gameScreen = "instructions"; }
-                else if (location == 32) { location = 38;  }
+                else if (location == 32) { location = 38; }
                 else if (location == 35) { }
                 else if (location == 36) { gameScreen = "instructions"; }
                 else if (location == 37) { gameScreen = "instructions"; }
-                else if (location == 38) { location = -2;}
+                else if (location == 38) { location = -2; }
                 else if (location == 39) { location = -1; gameScreen = "game"; storyLabel.Text = "Press any of the below keys to continue"; }
 
                 else if (location == -1)
@@ -534,7 +500,8 @@ namespace Desert_Space_Game
                 else if (location == -4) { location = 2; }
                 else if (location == -12) { location = 11; }
                 else if (location == -13) { location = 13; }
-
+                else if (location == -14) { location = 13;  }
+                else if (location == -14) { location = 13; }
             }
 
             if (e.KeyCode == Keys.N) // purple
@@ -718,7 +685,6 @@ namespace Desert_Space_Game
                     Refresh();
                     break;
                 case 6:
-
                     storyLabel.Text = "He rasps, gesturing at his legs. He won't be moving any time soon, and on a forign planet to boot. Its a dangerous spot.";
                     greenLabel.Text = "Abandon him";
                     redLabel.Text = "Give respirator";
@@ -980,10 +946,13 @@ namespace Desert_Space_Game
                     storyLabel.Text = "Many blue lights are circling you.'Herald. Messenger. Enemy?";
                     greenLabel.Text = "I can be a herald";
                     redLabel.Text = "Uh, Messenger?";
-
-                    purpleLabel.Text = "Make no mistake, I am nemy";
+                    purpleLabel.Text = "Make no mistake, I am enemy";
                     yellowLabel.Text = "";
                     whiteLabel.Text = "";
+                    if (storyLabel.Visible == true)
+                    {
+                        blueOrb = true;
+                    }
                     storyBox.Image = (Properties.Resources.alienworld1);
                     Refresh();
                     break;
@@ -1056,7 +1025,10 @@ namespace Desert_Space_Game
                     greenLabel.Text = "continue"; ;
                     Refresh();
                     break;
-
+                case -14:
+                    storyLabel.Text = "You have already checked those corpses";
+                    redLabel.Text = "Continue";
+                    break;
                 case -18:
                     storyLabel.Text = "You do not have authorization.";
                 redLabel.Text = "continue"; ;
