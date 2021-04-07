@@ -600,11 +600,11 @@ namespace Desert_Space_Game
             switch (location)
             {
                 case -5:
-                    storyLabel.Text = "Removal of alien life in process. Countdown protocols underway ";
+                    storyLabel.Text = "Removal of alien life in process. Countdown protocols  underway  ";
                     break;
                 case -3:
                     int rand1 = randGen.Next(1, 4);
-                    int rand2 = randGen.Next(1, 4);
+                    int rand2 = randGen.Next(1, 4);      
                     int rand3 = randGen.Next(1, 4);
                     if (rand2 == rand1)
                     {
@@ -647,7 +647,7 @@ namespace Desert_Space_Game
                 case 2:
                     storyLabel.Text = $"{playerName} awake in a room, remembering the crash. The mission, to your right is another crewmember.";
                     greenLabel.Text = "Exit the room";
-                    redLabel.Text = "Check the other";
+                    redLabel.Text = "Check the other crewmate";
                     purpleLabel.Text = "Look for gear in this room";
                     yellowLabel.Text = "";
                     whiteLabel.Text = "";
