@@ -29,15 +29,14 @@ namespace Desert_Space_Game
         //game over condition variables
         int health = 3;
         int sanity = 3;
-        int deathTimer = 200;
-        int countdown = 50;
+        int deathTimer = 300;
+        int countdown = 100;
         string playerName;
         int scene18Visited = 0;
         int scene4Visited = 0;
-        int scene22Visited = 0;
         int scene14Visited = 0;
         int scene16Visited = 0;
-        int scene12Visited = 0;
+        int scene13Visited = 0;
 
         string textGameOver = "YOU DIED";
 
@@ -46,16 +45,16 @@ namespace Desert_Space_Game
         bool engineer = false;
         bool scientist = false;
         bool officer = false;
-        bool survivor = false;
         bool respirator = false;
         bool crowbar = false;
         bool preservation = false;
         bool airlockOpen = false;
         bool masterCode = false;
-        bool survivorDead = false;
         bool broadcastOn = false;
         bool blueOrb = false;
         bool bomb = false;
+        bool survivor = false;
+        bool survivorDead = false;
 
 
         List<int> orbX = new List<int>();
@@ -119,13 +118,11 @@ namespace Desert_Space_Game
                 engineer = false;
                 scientist = false;
                 officer = false;
-                survivor = false;
                 respirator = false;
                 crowbar = false;
                 preservation = false;
                 airlockOpen = false;
                 masterCode = false;
-                survivorDead = false;
                 blueOrb = false;
                 broadcastOn = false;
                 bomb = false;
@@ -150,21 +147,21 @@ namespace Desert_Space_Game
                 engineer = false;
                 scientist = false;
                 officer = false;
-                survivor = false;
                 respirator = false;
                 crowbar = false;
                 preservation = false;
                 airlockOpen = false;
                 masterCode = false;
-                survivorDead = false;
                 blueOrb = false;
                 broadcastOn = false;
                 bomb = false;
+                survivor = false;
+                survivorDead = false;
                 scene18Visited = 0;
                 scene4Visited = 0;
-                scene22Visited = 0;
                 scene16Visited = 0;
-                scene12Visited = 0;
+                scene13Visited = 0;
+                hubVisit = false;
                 roleBox.Hide();
                 respiratorBox.Hide();
                 crowbarBox.Hide();
@@ -388,17 +385,17 @@ namespace Desert_Space_Game
                     }
                 }
                 else if (location == 5) { location = 2; }
-                else if (location == 6) { location = 7; survivorDead = true; }
+                else if (location == 6) { location = 7; }
                 else if (location == 7) { location = 9; }
                 else if (location == 8) { location = 9; }
                 else if (location == 9)
                 {
-                    location = 13;
+                    location = 13; 
                 }
                 else if (location == 10) { location = 9; crowbar = true; sanity--; }
                 else if (location == 11) { location = 9; }
                 else if (location == 12) { location = 9; }
-                else if (location == 13) { if (scene16Visited == 0 && officer == true || scene16Visited == 0 && masterCode == true) { location = 16; } else if (scene18Visited == 0) { location = 18; } else { location = -13; } }
+                else if (location == 13) { if (scene16Visited == 0 && officer == true || scene16Visited == 0 && masterCode == true) { location = 16; } else if (scene18Visited == 0) { location = 18; } else { location = -13; } hubVisit = true; }
                 else if (location == 14) { } //nothing
                 else if (location == 15) { location = 13; }
                 else if (location == 16) { sanity--; location = 17; bomb = true; }
@@ -466,7 +463,7 @@ namespace Desert_Space_Game
                 else if (location == 10) { location = 9; }
                 else if (location == 11) { location = 12; health--; preservation = true; }
                 else if (location == 12) { location = 9; }
-                else if (location == 13) { if (scene14Visited == 0) { location = 14; sanity--; } else { location = -14; } }
+                else if (location == 13) { if (scene14Visited == 0) { location = 14; sanity--; } else { location = -14; } hubVisit = true; }
                 else if (location == 14) { if (scientist == true) { location = 15; } else { location = 13; } scene14Visited++; }
                 else if (location == 15) { location = 13; }
                 else if (location == 16) { location = 18; bomb = true; }
@@ -512,7 +509,7 @@ namespace Desert_Space_Game
                 else if (location == 3) { location = 2; respirator = true; }
                 else if (location == 9) { location = 11; }
                 else if (location == 10 && bomb == true) { location = -3; }
-                else if (location == 13) { location = 21; sanity--; masterCode = true; }
+                else if (location == 13) { location = 21; sanity--; masterCode = true; hubVisit = true; }
                 else if (location == 18) { location = 18; health--; }
                 else if (location == 21) { location = 13; }
                 else if (location == 22) { location = 9; }
@@ -564,6 +561,7 @@ namespace Desert_Space_Game
 
             if (e.KeyCode == Keys.V)
             {
+                hubVisit = true;
                 if (location == 0)
                 {
                     location = 22;
@@ -767,7 +765,12 @@ namespace Desert_Space_Game
                     Refresh();
                     break;
                 case 13:
-                    storyLabel.Text = "You enter the control room. Most of the personnel is nothing but bloody corpses.";
+                    if (hubVisit == false)
+                    { storyLabel.Text = "You enter the control room. Most of the personnel is nothing but bloody corpses."; }
+                    else
+                    {
+                        storyLabel.Text = "You may access the following areas of the ship";
+                    }
                     greenLabel.Text = "Time to access the computer mainframe, see what is going on";
                     redLabel.Text = "Let's see if anyone is still alive.";
                     purpleLabel.Text = "Well, they don't have any need for their belongings.";
