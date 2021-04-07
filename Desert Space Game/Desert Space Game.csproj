@@ -188,5 +188,14 @@
   <ItemGroup>
     <None Include="Resources\beep sound effect.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\communications.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\airlock icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\respirator.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

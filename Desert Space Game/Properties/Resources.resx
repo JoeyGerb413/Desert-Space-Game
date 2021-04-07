@@ -121,6 +121,9 @@
   <data name="airlock1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\airlock1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="airlock_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\airlock icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="alienworld1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\alienworld1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -135,6 +138,9 @@
   </data>
   <data name="cockpit1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cockpit1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="communications" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\communications.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="computerChip1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\computerChip1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -171,6 +177,9 @@
   </data>
   <data name="preservation suit1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\preservation suit1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="respirator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\respirator.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="scientist1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\scientist1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
