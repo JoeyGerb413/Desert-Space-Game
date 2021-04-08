@@ -354,6 +354,14 @@ namespace Desert_Space_Game
                     }
                 }
             }
+            if (location == 38)
+            {
+                for (int i = 0; i < orbX.Count; i++)
+                {
+                    orbX.RemoveRange(0, orbX.Count); ;
+
+                }
+            }
             Refresh();
         }
 
@@ -390,7 +398,7 @@ namespace Desert_Space_Game
                 else if (location == 8) { location = 9; }
                 else if (location == 9)
                 {
-                    location = 13; 
+                    location = 13;
                 }
                 else if (location == 10) { location = 9; crowbar = true; sanity--; }
                 else if (location == 11) { location = 9; }
@@ -419,7 +427,7 @@ namespace Desert_Space_Game
                 else if (location == 29) { location = 31; }
                 else if (location == 30) { location = 38; } // end game scenes
                 else if (location == 31) { location = 38; }
-                else if (location == 32) { location = 32; }
+                else if (location == 32) { location = 38; }
                 else if (location == 33) { }
                 else if (location == 34) { gameScreen = "opening"; continueButton.Show(); }
                 else if (location == 35) { gameScreen = "opening"; continueButton.Show(); }
@@ -481,7 +489,7 @@ namespace Desert_Space_Game
                 else if (location == 28) { location = 9; }
                 else if (location == 29) { location = 32; }
                 else if (location == 34) { gameScreen = "instructions"; }
-                else if (location == 32) { location = 38; }
+                else if (location == 32) { location = 9; }
                 else if (location == 35) { }
                 else if (location == 36) { gameScreen = "instructions"; }
                 else if (location == 37) { gameScreen = "instructions"; }
@@ -497,7 +505,7 @@ namespace Desert_Space_Game
                 else if (location == -4) { location = 2; }
                 else if (location == -12) { location = 11; }
                 else if (location == -13) { location = 13; }
-                else if (location == -14) { location = 13;  }
+                else if (location == -14) { location = 13; }
                 else if (location == -14) { location = 13; }
             }
 
@@ -514,6 +522,7 @@ namespace Desert_Space_Game
                 else if (location == 21) { location = 13; }
                 else if (location == 22) { location = 9; }
                 else if (location == 29) { location = 30; }
+                else if (location == 32) { location = 42;  }
                 else if (location == 36) { location = 34; }
                 else if (location == 34) { location = 36; }
                 else if (location == 38) { this.Close(); }
@@ -602,7 +611,7 @@ namespace Desert_Space_Game
                     break;
                 case -3:
                     int rand1 = randGen.Next(1, 4);
-                    int rand2 = randGen.Next(1, 4);      
+                    int rand2 = randGen.Next(1, 4);
                     int rand3 = randGen.Next(1, 4);
                     if (rand2 == rand1)
                     {
@@ -788,6 +797,7 @@ namespace Desert_Space_Game
                     yellowLabel.Text = "";
                     whiteLabel.Text = "";
                     storyBox.Image = (Properties.Resources.controlRoom1);
+                    vomit.Play();
                     Refresh();
 
                     break;
@@ -800,6 +810,7 @@ namespace Desert_Space_Game
                     yellowLabel.Text = "";
                     whiteLabel.Text = "";
                     storyBox.Image = (Properties.Resources.controlRoom1);
+                    ambience.Play();
                     Refresh();
                     break;
                 case 16:
@@ -846,6 +857,7 @@ namespace Desert_Space_Game
                     yellowLabel.Text = "";
                     whiteLabel.Text = "";
                     storyBox.Image = (Properties.Resources.computerScreen);
+                    zap.Play();
                     Refresh();
                     break;
                 case 20:
@@ -857,27 +869,28 @@ namespace Desert_Space_Game
                     yellowLabel.Text = "";
                     whiteLabel.Text = "";
                     storyBox.Image = (Properties.Resources.computerScreen);
+                    zap.Play();
                     Refresh();
                     break;
                 case 21:
                     storyLabel.Text = "You locate the captains body, finding the master code from the compute. You can access any function you wish.";
                     greenLabel.Text = "";
                     redLabel.Text = "";
-
                     purpleLabel.Text = "Continue";
                     yellowLabel.Text = "";
                     whiteLabel.Text = "";
                     storyBox.Image = (Properties.Resources.controlRoom1);
+                    vomit.Play();
                     Refresh();
                     break;
                 case 22:
                     storyLabel.Text = "You enter the broadcasting room";
                     greenLabel.Text = "Time to contact Earth, they can send backup";
                     redLabel.Text = "Initiate scan for lifeforms.";
-
                     purpleLabel.Text = "Exit room.";
                     yellowLabel.Text = "";
                     whiteLabel.Text = "";
+                    beep.Play();
                     storyBox.Image = (Properties.Resources.engine1);
                     Refresh();
                     break;
@@ -885,11 +898,11 @@ namespace Desert_Space_Game
                     storyLabel.Text = "You send a distress signal towards Earth, as well as all the research info the expedition compiled";
                     greenLabel.Text = "continue";
                     redLabel.Text = "";
-
                     purpleLabel.Text = "";
                     yellowLabel.Text = "";
                     whiteLabel.Text = "";
                     storyBox.Image = (Properties.Resources.computerScreen);
+                    beep.Play();
                     Refresh();
                     break;
                 case 24:
@@ -900,27 +913,28 @@ namespace Desert_Space_Game
                     yellowLabel.Text = "";
                     whiteLabel.Text = "";
                     storyBox.Image = (Properties.Resources.computerScreen);
+                    beep.Play();
                     Refresh();
                     break;
                 case 25:
                     storyLabel.Text = "A distinct buzzing noise affects you. You clutch your head at the forbidden sound.";
                     greenLabel.Text = "Open comm channels";
                     redLabel.Text = "Run!";
-
                     purpleLabel.Text = "";
                     yellowLabel.Text = "";
                     whiteLabel.Text = "";
                     storyBox.Image = (Properties.Resources.computerScreen);
+                    ambience.Play();
                     Refresh();
                     break;
                 case 26:
                     storyLabel.Text = "A voice radiates through your mind. 'Who? Why? Come.";
                     greenLabel.Text = "Plead for my life";
                     redLabel.Text = "Look, I don't know who you are, but I am not compromising my life or freedom.";
-
                     purpleLabel.Text = "";
                     yellowLabel.Text = "";
                     whiteLabel.Text = "";
+                    ambience.Play();
                     storyBox.Image = (Properties.Resources.computerScreen);
                     Refresh();
                     break;
@@ -928,10 +942,10 @@ namespace Desert_Space_Game
                     storyLabel.Text = "'Harm. None. Wait.' You see a blue orb of light enter the room. You scream";
                     greenLabel.Text = "Run";
                     redLabel.Text = "Remain";
-
                     purpleLabel.Text = "";
                     yellowLabel.Text = "";
                     whiteLabel.Text = "";
+                    ambience.Play();
                     storyBox.Image = (Properties.Resources.computerScreen);
                     Refresh();
                     break;
@@ -946,7 +960,7 @@ namespace Desert_Space_Game
                     Refresh();
                     break;
                 case 29:
-                    storyLabel.Text = "Many blue lights are circling you.'Herald. Messenger. Enemy?";
+                    storyLabel.Text = "You exit the airlock, walking onto the planets desolate surface. Many blue lights are circling you.'Herald. Messenger. Enemy?'";
                     greenLabel.Text = "I can be a herald";
                     redLabel.Text = "Uh, Messenger?";
                     purpleLabel.Text = "Make no mistake, I am enemy";
@@ -957,13 +971,13 @@ namespace Desert_Space_Game
                         blueOrb = true;
                     }
                     storyBox.Image = (Properties.Resources.alienworld1);
+                    ambience.Play();
                     Refresh();
                     break;
                 case 30:
                     storyLabel.Text = "Your contact with extra-terrestrial life has resulted in your surival. The question is, will your message be a good one, or a bad one?";
                     greenLabel.Text = "You survived.";
                     redLabel.Text = "";
-
                     purpleLabel.Text = "";
                     yellowLabel.Text = "";
                     whiteLabel.Text = "";
@@ -980,12 +994,10 @@ namespace Desert_Space_Game
                     storyBox.Image = (Properties.Resources.alienworld1);
                     Refresh();
                     break;
-
                 case 32:
                     storyLabel.Text = "'Enemy. Ruin. Doom.";
                     greenLabel.Text = "Run accross planets surface";
                     redLabel.Text = "Return to hub";
-
                     purpleLabel.Text = "Try and fight.";
                     yellowLabel.Text = "";
                     whiteLabel.Text = "";
@@ -1015,6 +1027,14 @@ namespace Desert_Space_Game
                 case 40:
                     storyLabel.Text = "The airlock is depowered. You cannot force it open";
                     yellowLabel.Text = "Continue";
+                    impact.Play();
+                    Refresh();
+                    break;
+                case 42:
+                    storyLabel.Text = "You flee as the blue orbs follow you. There is only one way to escape the terrors now...";
+                    wind.Play();
+                    //intention is that the player is required to press the escape button.
+                    Refresh();
                     break;
 
                 case -12:
@@ -1034,7 +1054,7 @@ namespace Desert_Space_Game
                     break;
                 case -18:
                     storyLabel.Text = "You do not have authorization.";
-                redLabel.Text = "continue"; ;
+                    redLabel.Text = "continue"; ;
                     Refresh();
                     break;
                 case -24:
